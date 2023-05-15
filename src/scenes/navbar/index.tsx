@@ -4,7 +4,7 @@ import Logo from "@/assets/Logo.png"
 import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
-
+import ActionButton from "@/shared/ActionButton"
 
 
 type Props = {
@@ -52,7 +52,7 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                         </div>
                         <div className={`${flexBetween} gap-8 text-sm`}>
                             <p>Sign In</p>
-                            <button>Become a member</button>
+                            <ActionButton setSelectedPage={setSelectedPage}>Become a member</ActionButton>
                         </div>
                     </div>
                     )                                
@@ -60,8 +60,8 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                      (
                                             
 
-                        <button className=" bg-secondary-500 rounded-full flex md:hidden" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
-                            <Bars3Icon className="h-6  text-white  p-1 w-6"/>
+                        <button className=" bg-secondary-500 rounded-full p-2 " onClick={()=>setIsMenuToggled(!isMenuToggled)}>
+                            <Bars3Icon className="h-6 w-6 text-white "/>
                         </button>                    
                     )}
 
