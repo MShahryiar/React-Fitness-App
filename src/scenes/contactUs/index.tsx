@@ -73,6 +73,7 @@ const onSubmit = async(e: any) => {
                       {...register("name", {
                         required:true,
                         maxLength:100,
+                        
                       })}
                     />
                     {errors.name && (

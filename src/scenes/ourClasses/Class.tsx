@@ -1,6 +1,3 @@
-import { ClassTypes } from '@/shared/types'
-import React from 'react'
-
 type Props = {
     name:string,
     description?:string,
